@@ -44,6 +44,7 @@
         }
     </style>
 </head>
+
 <body class="bg-white">
     <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
@@ -56,37 +57,50 @@
                 </div>
                 
                 <!-- Contact Info -->
-                <div class="hidden lg:flex items-center space-x-8">
+                <div class="flex items-center space-x-8">
                     <!-- Phone -->
                     <div class="flex items-center space-x-3">
-                        <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                            <img src="public/assets/icons/PhoneIcon.svg" alt="" class="w-4 h-4">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                            <!-- Heroicon: phone -->
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 6.75c0 7.008 5.742 12.75 12.75 12.75.435 0 .816-.342.882-.773l.447-3.134a.844.844 0 00-.21-.687l-2-2a.75.75 0 01.092-1.134l3.1-2.326a.75.75 0 01.96.048l2 2a.844.844 0 00.687.21l3.134-.447a.75.75 0 00.773-.882C21.75 5.168 16.008-.75 8.25-.75c-.435 0-.816.342-.882.773l-.447 3.134a.844.844 0 00.21.687l2 2a.75.75 0 01-.092 1.134l-3.1 2.326a.75.75 0 01-.96-.048l-2-2a.844.844 0 00-.687-.21l-3.134.447a.75.75 0 00-.773.882Z"/>
+                            </svg>
                         </div>
                         <div>
-                            <div class="text-xs text-text-muted uppercase">Call Us</div>
-                            <div class="text-sm font-medium text-dark-navy">+965 223 90 010</div>
+                            <div class="text-xs text-muted uppercase font-outfit">Call Us</div>
+                            <div class="text-sm font-medium text-dark-navy font-outfit">+965 223 90 010</div>
                         </div>
                     </div>
-                    
+
                     <!-- Email -->
                     <div class="flex items-center space-x-3">
-                        <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                            <img src="public/assets/icons/EmailIcon.svg" alt="" class="w-4 h-4">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                            <!-- Heroicon: envelope -->
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M21.75 7.5v9.75a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V7.5m19.5 0A2.25 2.25 0 0019.5 5.25H4.5A2.25 2.25 0 002.25 7.5m19.5 0V7.875M2.25 7.5v.375m0 0l8.819 5.879a2.25 2.25 0 002.362 0L21.75 7.875"/>
+                            </svg>
                         </div>
                         <div>
-                            <div class="text-xs text-text-muted uppercase">Mail For Support</div>
-                            <div class="text-sm font-medium text-dark-navy">info@citygroupkw.com</div>
+                            <div class="text-xs text-muted uppercase font-outfit">Mail For Support</div>
+                            <div class="text-sm font-medium text-dark-navy font-outfit">info@citygroupkw.com</div>
                         </div>
                     </div>
-                    
+
                     <!-- Address -->
                     <div class="flex items-center space-x-3">
-                        <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                            <img src="public/assets/icons/LocationIcon.svg" alt="" class="w-4 h-4">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                            <!-- Heroicon: map-pin -->
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                      d="M12 21c-3.866-4.555-6.25-7.57-6.25-10.25a6.25 6.25 0 1112.5 0C18.25 13.43 15.866 16.445 12 21zm0-9a2 2 0 100-4 2 2 0 000 4z"/>
+                            </svg>
                         </div>
                         <div>
-                            <div class="text-xs text-text-muted uppercase">Office Address</div>
-                            <div class="text-sm font-medium text-dark-navy">Floor 5 & 14, Bibi Tower, Salmiya, Kuwait.</div>
+                            <div class="text-xs text-muted uppercase font-outfit">Office Address</div>
+                            <div class="text-sm font-medium text-dark-navy font-outfit">Floor 5 & 14, Bibi Tower,
+                                Salmiya, Kuwait.</div>
                         </div>
                     </div>
                 </div>
@@ -114,9 +128,9 @@
             </nav>
         </div>
     </header>
-    
+
     <!-- Hero Section -->
-    <section class="relative bg-dark-bg py-24 lg:py-32">
+    <section class="relative py-24 lg:py-32" style="background-image: url('public/assets/bg-clients.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="absolute inset-0 bg-gradient-to-b from-dark-bg/70 to-dark-bg/90"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl">
@@ -170,7 +184,7 @@
                         
                         <!-- Right: Client Logo -->
                         <div class="bg-bg-light rounded-lg p-8 flex flex-col items-center justify-center">
-                            <img src="public/assets/ministry-health-logo.png" alt="Ministry of Health" class="w-64 h-auto mb-6">
+                            <img src="public/assets/icons/logo-seha.png" alt="Ministry of Health" class="w-64 h-auto mb-6">
                             <div class="flex items-center space-x-2">
                                 <span class="text-sm text-primary font-medium">Ministry of Health</span>
                                 <span class="px-3 py-1 bg-primary text-white text-sm rounded">Kuwait</span>
@@ -202,7 +216,7 @@
                 </div>
                 
                 <!-- Results Section -->
-                <div class="relative bg-cover bg-center p-8 lg:p-12" style="background-image: url('public/assets/pattern-bg.jpg');">
+                <div class="relative p-8 lg:p-12" style="background-image: url('public/assets/pattern-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                     <div class="absolute inset-0 bg-dark-bg/95"></div>
                     <div class="relative">
                         <div class="flex items-center space-x-3 mb-6">
@@ -245,7 +259,7 @@
                     <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-10">
                         <!-- Left: Client Logo -->
                         <div class="bg-bg-light rounded-lg p-8 flex flex-col items-center justify-center order-2 lg:order-1">
-                            <img src="public/assets/ministry-health-logo.png" alt="Ministry of Health" class="w-64 h-auto mb-6">
+                            <img src="public/assets/icons/logo-seha.png" alt="Ministry of Health" class="w-64 h-auto mb-6">
                             <div class="flex items-center space-x-2">
                                 <span class="text-sm text-primary font-medium">Ministry of Health</span>
                                 <span class="px-3 py-1 bg-primary text-white text-sm rounded">Kuwait</span>
@@ -299,9 +313,9 @@
                         </p>
                     </div>
                 </div>
-                
+
                 <!-- Results Section -->
-                <div class="relative bg-cover bg-center p-8 lg:p-12" style="background-image: url('public/assets/pattern-bg.jpg');">
+                <div class="relative p-8 lg:p-12" style="background-image: url('public/assets/pattern-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                     <div class="absolute inset-0 bg-dark-bg/95"></div>
                     <div class="relative">
                         <div class="flex items-center space-x-3 mb-6">
@@ -368,7 +382,7 @@
                         
                         <!-- Right: Client Logo -->
                         <div class="bg-bg-light rounded-lg p-8 flex flex-col items-center justify-center">
-                            <img src="public/assets/ministry-health-logo.png" alt="Ministry of Health" class="w-64 h-auto mb-6">
+                            <img src="public/assets/icons/logo-seha.png" alt="Ministry of Health" class="w-64 h-auto mb-6">
                             <div class="flex items-center space-x-2">
                                 <span class="text-sm text-primary font-medium">Ministry of Health</span>
                                 <span class="px-3 py-1 bg-primary text-white text-sm rounded">Kuwait</span>
@@ -400,7 +414,7 @@
                 </div>
                 
                 <!-- Results Section -->
-                <div class="relative bg-cover bg-center p-8 lg:p-12" style="background-image: url('public/assets/pattern-bg.jpg');">
+                <div class="relative p-8 lg:p-12" style="background-image: url('public/assets/pattern-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                     <div class="absolute inset-0 bg-dark-bg/95"></div>
                     <div class="relative">
                         <div class="flex items-center space-x-3 mb-6">
