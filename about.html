@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>About Us - Method Engineering Consultancy</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Arial&display=swap" rel="stylesheet" />
+
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Custom Tailwind Configuration -->
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            "primary-blue": "#1669B3",
+                            "secondary-blue": "#1A5490",
+                            "primary-orange": "#FE760B",
+                            "dark-navy": "#0F172B",
+                            "text-dark": "#191F29",
+                            "text-gray": "#45556C",
+                            "text-light-gray": "#666666",
+                            "background-light": "#F8F9FA",
+                            "background-lighter": "#F1F5F9",
+                        },
+                        fontFamily: {
+                            outfit: ["Outfit", "sans-serif"],
+                            inter: ["Inter", "sans-serif"],
+                            arial: ["Arial", "sans-serif"],
+                        },
+                    },
+                },
+            };
+        </script>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: Arial, sans-serif;
+            }
+
+            .hero-diagonal {
+                position: relative;
+                background: linear-gradient(135deg, #1a5490 0%, #0f172b 100%);
+                clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            }
+
+            .section-underline {
+                width: 65px;
+                height: 4px;
+                background-color: #fe760b;
+            }
+
+            .icon-circle {
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                background-color: #fff5ed;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .icon-square {
+                width: 64px;
+                height: 64px;
+                border-radius: 12px;
+                background-color: rgba(255, 255, 255, 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .hover-lift {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .hover-lift:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .btn-primary {
+                background-color: #fe760b;
+                color: white;
+                padding: 12px 24px;
+                border-radius: 8px;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .btn-primary:hover {
+                background-color: #e56a0a;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(254, 118, 11, 0.3);
+            }
+
+            .social-icon {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background-color: #fe760b;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+            }
+
+            .social-icon:hover {
+                background-color: #e56a0a;
+                transform: scale(1.1);
+            }
+
+            .footer-gradient {
+                background: linear-gradient(90deg, rgba(173, 197, 247, 1) 0%, rgba(38, 142, 233, 1) 100%);
+            }
+
+            .governance-border {
+                border-left: 4px solid #1a5490;
+            }
+        </style>
+    </head>
+
+    <body class="bg-white">
+        <!-- Header -->
+        <header class="bg-white border-b border-gray-200">
+            <!-- Top Contact Bar -->
+            <div class="bg-background-lighter py-4">
+                <div class="container mx-auto px-4 flex items-center justify-between">
+                    <!-- Logo -->
+                    <div class="flex items-center">
+                        <img src="public/assets/logo.svg" alt="CGC City Group Company" class="h-12" />
+                    </div>
+
+                    <div class="flex items-center space-x-8">
+                        <!-- Phone -->
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                                    />
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="text-xs text-text-light-gray uppercase font-outfit">Call Us</div>
+                                <div class="text-sm font-medium text-text-dark font-outfit">+965 223 90 010</div>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="text-xs text-text-light-gray uppercase font-outfit">Mail For Support</div>
+                                <div class="text-sm font-medium text-text-dark font-outfit">info@citygroupkw.com</div>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-primary-blue rounded-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="text-xs text-text-light-gray uppercase font-outfit">Office Address</div>
+                                <div class="text-sm font-medium text-text-dark font-outfit">Floor 5 & 14, Bibi Tower, Salmiya, Kuwait.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="container mx-auto px-4 py-6">
+                <div class="flex items-center justify-between">
+                    <!-- Menu Items -->
+                    <div class="hidden lg:flex items-center space-x-8">
+                        <a href="#" class="text-sm font-semibold text-text-dark uppercase font-outfit hover:text-primary-blue transition">Home</a>
+                        <a href="#" class="text-sm font-semibold text-primary-blue uppercase font-outfit hover:text-primary-blue transition">About Us</a>
+                        <a href="#" class="text-sm font-semibold text-text-dark uppercase font-outfit hover:text-primary-blue transition">Our Services</a>
+                        <a href="#" class="text-sm font-semibold text-text-dark uppercase font-outfit hover:text-primary-blue transition">Certifications</a>
+                        <a href="#" class="text-sm font-semibold text-text-dark uppercase font-outfit hover:text-primary-blue transition">News</a>
+                        <a href="#" class="text-sm font-semibold text-text-dark uppercase font-outfit hover:text-primary-blue transition">Clients</a>
+                        <a href="#" class="text-sm font-semibold text-text-dark uppercase font-outfit hover:text-primary-blue transition">Careers</a>
+                        <a href="#" class="text-sm font-semibold text-text-dark uppercase font-outfit hover:text-primary-blue transition">Contact Us</a>
+                    </div>
+
+                    <!-- Language & Menu -->
+                    <div class="flex items-center space-x-4">
+                        <span class="text-sm font-bold text-primary-blue uppercase">عربي</span>
+                        <button class="w-10 h-10 bg-primary-orange rounded-lg flex items-center justify-center hover:bg-opacity-90 transition">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-diagonal py-24">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl">
+                    <div class="section-underline mb-6"></div>
+                    <h1 class="text-5xl font-bold text-white mb-6">About Us</h1>
+                    <p class="text-xl text-white text-opacity-90 leading-relaxed">
+                        Method Engineering Consultancy was established in Cairo in 1996 as a leading provider of comprehensive engineering consultancy services. We specialize in structural design, architectural planning, and project management across
+                        residential.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founder Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Founder Image -->
+                    <div>
+                        <img src="public/assets/founder-portrait.jpg" alt="Dr. Ahmed Hassan" class="w-full rounded-lg shadow-lg" />
+                    </div>
+
+                    <!-- Founder Bio -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-text-dark mb-4">Founder & Chairman of the Board</h2>
+                        <div class="section-underline mb-6"></div>
+
+                        <p class="text-lg text-text-gray leading-relaxed mb-6">
+                            Dr. Ahmed Hassan founded Method Engineering Consultancy with a vision to transform the engineering consultancy landscape in Egypt and the Middle East. With over 30 years of experience in structural engineering and project
+                            management, he has led the company through decades of growth and innovation.
+                        </p>
+
+                        <p class="text-lg text-text-gray leading-relaxed">
+                            Under his leadership, Method has successfully delivered over 500 major projects, ranging from residential complexes to large-scale commercial and industrial facilities. His commitment to excellence, innovation, and
+                            professional integrity has established Method as a trusted name in engineering consultancy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision & Mission Section -->
+        <section class="py-20 bg-background-light">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Vision Card -->
+                    <div class="bg-white p-8 rounded-lg">
+                        <div class="section-underline mb-6"></div>
+                        <div class="icon-circle mb-6">
+                            <img src="public/assets/icons/EyeIcon.svg" alt="Vision" class="w-8 h-8" />
+                        </div>
+                        <h3 class="text-2xl font-bold text-text-dark mb-4">Our Vision</h3>
+                        <p class="text-lg text-text-gray leading-relaxed">
+                            To be the leading engineering consultancy firm in the region, recognized for innovation, technical excellence, and sustainable design solutions that shape the future of our built environment.
+                        </p>
+                    </div>
+
+                    <!-- Mission Card -->
+                    <div class="bg-white p-8 rounded-lg">
+                        <div class="section-underline mb-6"></div>
+                        <div class="icon-circle mb-6">
+                            <img src="public/assets/icons/ActivityIcon.svg" alt="Mission" class="w-8 h-8" />
+                        </div>
+                        <h3 class="text-2xl font-bold text-text-dark mb-4">Our Mission</h3>
+                        <p class="text-lg text-text-gray leading-relaxed">
+                            To deliver world-class engineering consultancy services through cutting-edge technology, experienced professionals, and a commitment to exceeding client expectations on every project we undertake.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Method Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-text-dark mb-4">Why Choose Method</h2>
+                    <div class="section-underline mx-auto mb-6"></div>
+                    <p class="text-lg text-text-gray max-w-3xl mx-auto">Four core principles that define our approach to engineering excellence and client service.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Card 1: Honesty & Transparency -->
+                    <div class="bg-secondary-blue p-8 rounded-lg text-white">
+                        <div class="icon-square mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Honesty & Transparency</h3>
+                        <p class="text-base leading-relaxed text-white text-opacity-90">We maintain complete transparency in all our dealings, providing honest assessments and clear communication throughout every project phase.</p>
+                    </div>
+
+                    <!-- Card 2: Fair Dealing -->
+                    <div class="bg-secondary-blue p-8 rounded-lg text-white">
+                        <div class="icon-square mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Fair Dealing</h3>
+                        <p class="text-base leading-relaxed text-white text-opacity-90">Our commitment to fairness ensures equitable partnerships, competitive pricing, and ethical practices in all business relationships.</p>
+                    </div>
+
+                    <!-- Card 3: Professionalism & Creativity -->
+                    <div class="bg-secondary-blue p-8 rounded-lg text-white">
+                        <div class="icon-square mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M6 6.878V6a2.25 2.25 0 012.25-2.25h7.5A2.25 2.25 0 0118 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 004.5 9v.878m13.5-3A2.25 2.25 0 0119.5 9v.878m0 0a2.246 2.246 0 00-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0121 12v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6c0-.98.626-1.813 1.5-2.122"
+                                />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Professionalism & Creativity</h3>
+                        <p class="text-base leading-relaxed text-white text-opacity-90">We blend technical professionalism with creative problem-solving to deliver innovative solutions that exceed industry standards.</p>
+                    </div>
+
+                    <!-- Card 4: Trust & Delivery -->
+                    <div class="bg-secondary-blue p-8 rounded-lg text-white">
+                        <div class="icon-square mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Trust & Delivery</h3>
+                        <p class="text-base leading-relaxed text-white text-opacity-90">Our track record speaks for itself - consistent on-time delivery, budget adherence, and long-term client relationships built on trust.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Team Section -->
+        <section class="py-20 bg-background-light">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-text-dark mb-4">Leadership Team</h2>
+                <div class="section-underline mb-8"></div>
+                <p class="text-base text-text-gray mb-12 max-w-3xl">A team of experienced leaders committed to driving excellence and innovation across all our business areas.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Leader 1 -->
+                    <div class="bg-white rounded-lg overflow-hidden hover-lift">
+                        <img src="public/assets/leader-1.jpg" alt="Ahmed Al-Mansour" class="w-full h-72 object-cover" />
+                        <div class="p-6">
+                            <h3 class="text-base font-bold text-text-dark mb-1">Ahmed Al-Mansour</h3>
+                            <p class="text-base text-secondary-blue mb-3">Chairman</p>
+                            <p class="text-sm text-text-gray leading-relaxed">
+                                With over 30 years of experience in strategic leadership, Ahmed drives City Group's vision and long-term growth strategy. His expertise spans finance, real estate, and international business development across the Gulf
+                                region.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Leader 2 -->
+                    <div class="bg-white rounded-lg overflow-hidden hover-lift">
+                        <img src="public/assets/leader-4.png" alt="Sarah Mitchell" class="w-full h-72 object-cover" />
+                        <div class="p-6">
+                            <h3 class="text-base font-bold text-text-dark mb-1">Sarah Mitchell</h3>
+                            <p class="text-base text-secondary-blue mb-3">Chief Executive Officer</p>
+                            <p class="text-sm text-text-gray leading-relaxed">
+                                Sarah leads operational excellence and innovation initiatives. Her background in technology transformation and process optimization has positioned City Group at the forefront of digital business practices in the
+                                region.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Leader 3 -->
+                    <div class="bg-white rounded-lg overflow-hidden hover-lift">
+                        <img src="public/assets/leader-3.jpg" alt="Omar Hassan" class="w-full h-72 object-cover" />
+                        <div class="p-6">
+                            <h3 class="text-base font-bold text-text-dark mb-1">Omar Hassan</h3>
+                            <p class="text-base text-secondary-blue mb-3">Chief Financial Officer</p>
+                            <p class="text-sm text-text-gray leading-relaxed">
+                                Omar oversees financial strategy, risk management, and investor relations. His prudent financial stewardship has ensured consistent growth and maintained City Group's strong market position and creditworthiness
+                                throughout economic cycles.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Leader 4 -->
+                    <div class="bg-white rounded-lg overflow-hidden hover-lift">
+                        <img src="public/assets/leader-4.png" alt="Fatima Al-Qassimi" class="w-full h-72 object-cover" />
+                        <div class="p-6">
+                            <h3 class="text-base font-bold text-text-dark mb-1">Fatima Al-Qassimi</h3>
+                            <p class="text-base text-secondary-blue mb-3">Chief Operations Officer</p>
+                            <p class="text-sm text-text-gray leading-relaxed">
+                                Fatima manages day-to-day operations across all business units, ensuring seamless coordination and execution. Her focus on efficiency and quality has streamlined processes and improved service delivery to clients and
+                                partners.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Leader 5 -->
+                    <div class="bg-white rounded-lg overflow-hidden hover-lift">
+                        <img src="public/assets/leader-5.jpg" alt="David Chen" class="w-full h-72 object-cover" />
+                        <div class="p-6">
+                            <h3 class="text-base font-bold text-text-dark mb-1">David Chen</h3>
+                            <p class="text-base text-secondary-blue mb-3">Chief Technology Officer</p>
+                            <p class="text-sm text-text-gray leading-relaxed">
+                                David spearheads digital transformation and technology infrastructure. His innovative approach to emerging technologies keeps City Group competitive, secure, and ready for the evolving demands of modern business
+                                operations.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Leader 6 -->
+                    <div class="bg-white rounded-lg overflow-hidden hover-lift">
+                        <img src="public/assets/leader-6.png" alt="Layla Abdullah" class="w-full h-72 object-cover" />
+                        <div class="p-6">
+                            <h3 class="text-base font-bold text-text-dark mb-1">Layla Abdullah</h3>
+                            <p class="text-base text-secondary-blue mb-3">Chief Human Resources Officer</p>
+                            <p class="text-sm text-text-gray leading-relaxed">
+                                Layla champions talent development and organizational culture. Her people-first philosophy has created an inclusive workplace environment that attracts, develops, and retains top professionals committed to City Group's
+                                mission and values.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Governance & Ethics Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Image -->
+                    <div>
+                        <img src="public/assets/governance-meeting.svg" alt="Governance" class="w-full rounded-xl" />
+                    </div>
+
+                    <!-- Content -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-text-dark mb-4">Governance & Ethics</h2>
+                        <div class="section-underline mb-6"></div>
+
+                        <p class="text-lg text-text-gray mb-6 leading-relaxed">
+                            We are committed to the highest standards of corporate governance and ethical conduct. Our governance framework establishes clear responsibilities and ensures accountability, transparency, and integrity in all our
+                            operations.
+                        </p>
+
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center space-x-3">
+                                <img src="public/assets/icons/CheckCircleBlueIcon.svg" alt="Check" class="w-5 h-5" />
+                                <span class="text-base text-text-dark">Transparent Decision-Making</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <img src="public/assets/icons/CheckCircleBlueIcon.svg" alt="Check" class="w-5 h-5" />
+                                <span class="text-base text-text-dark">Accountability at All Levels</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <img src="public/assets/icons/CheckCircleBlueIcon.svg" alt="Check" class="w-5 h-5" />
+                                <span class="text-base text-text-dark">Ethical Business Practices</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <img src="public/assets/icons/CheckCircleBlueIcon.svg" alt="Check" class="w-5 h-5" />
+                                <span class="text-base text-text-dark">Stakeholder Engagement</span>
+                            </div>
+                        </div>
+
+                        <div class="governance-border bg-background-light p-6 rounded-lg">
+                            <h3 class="text-base font-bold text-text-dark mb-3">Code of Ethics</h3>
+                            <p class="text-base text-text-gray mb-6 leading-relaxed">Download our complete Code of Ethics to understand our ethical standards and commitments.</p>
+                            <button class="btn-primary">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                                </svg>
+                                <span>Download Document (PDF)</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Locations Section -->
+        <section class="py-20 bg-background-light">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-text-dark mb-4">Our locations</h2>
+                <div class="section-underline mb-8"></div>
+                <p class="text-base text-text-gray mb-12 max-w-3xl">We operate from multiple strategic locations to better serve our clients and partners across the region.</p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Map -->
+                    <div class="rounded-xl overflow-hidden border border-gray-200">
+                        <iframe
+                            src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=29.3759,47.9774&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+                            width="100%"
+                            height="600"
+                            allowfullscreen="true"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="w-full"
+                        >
+                        </iframe>
+                    </div>
+
+                    <!-- Location Cards -->
+                    <div class="space-y-4">
+                        <!-- Location 1 -->
+                        <div class="bg-white p-6 rounded-lg border border-gray-200 hover-lift">
+                            <div class="flex items-start space-x-4">
+                                <svg class="w-5 h-5 mt-1 text-secondary-blue" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <div class="flex-1">
+                                    <div class="flex items-center space-x-2 mb-2">
+                                        <h3 class="text-base font-bold text-text-dark">Headquarters - Kuwait City</h3>
+                                        <span class="px-2 py-1 bg-primary-blue text-white text-xs font-bold rounded">HQ</span>
+                                    </div>
+                                    <p class="text-sm text-text-gray mb-2">Al-Shuhada Street, Block 5, Building 23, Kuwait City, Kuwait</p>
+                                    <p class="text-sm text-secondary-blue">+965 2222 3333</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Location 2 -->
+                        <div class="bg-white p-6 rounded-lg border border-gray-200 hover-lift">
+                            <div class="flex items-start space-x-4">
+                                <svg class="w-5 h-5 mt-1 text-secondary-blue" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <div class="flex-1">
+                                    <div class="flex items-center space-x-2 mb-2">
+                                        <h3 class="text-base font-bold text-text-dark">Headquarters - Kuwait City</h3>
+                                        <span class="px-2 py-1 bg-primary-blue text-white text-xs font-bold rounded">HQ</span>
+                                    </div>
+                                    <p class="text-sm text-text-gray mb-2">Al-Shuhada Street, Block 5, Building 23, Kuwait City, Kuwait</p>
+                                    <p class="text-sm text-secondary-blue">+965 2222 3333</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Location 3 -->
+                        <div class="bg-white p-6 rounded-lg border border-gray-200 hover-lift">
+                            <div class="flex items-start space-x-4">
+                                <svg class="w-5 h-5 mt-1 text-secondary-blue" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <div class="flex-1">
+                                    <div class="flex items-center space-x-2 mb-2">
+                                        <h3 class="text-base font-bold text-text-dark">Headquarters - Kuwait City</h3>
+                                        <span class="px-2 py-1 bg-primary-blue text-white text-xs font-bold rounded">HQ</span>
+                                    </div>
+                                    <p class="text-sm text-text-gray mb-2">Al-Shuhada Street, Block 5, Building 23, Kuwait City, Kuwait</p>
+                                    <p class="text-sm text-secondary-blue">+965 2222 3333</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Location 4 -->
+                        <div class="bg-white p-6 rounded-lg border border-gray-200 hover-lift">
+                            <div class="flex items-start space-x-4">
+                                <svg class="w-5 h-5 mt-1 text-secondary-blue" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                                <div class="flex-1">
+                                    <div class="flex items-center space-x-2 mb-2">
+                                        <h3 class="text-base font-bold text-text-dark">Headquarters - Kuwait City</h3>
+                                        <span class="px-2 py-1 bg-primary-blue text-white text-xs font-bold rounded">HQ</span>
+                                    </div>
+                                    <p class="text-sm text-text-gray mb-2">Al-Shuhada Street, Block 5, Building 23, Kuwait City, Kuwait</p>
+                                    <p class="text-sm text-secondary-blue">+965 2222 3333</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-dark-navy text-white py-12 lg:py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                    <!-- Company Info -->
+                    <div>
+                        <img src="public/assets/logo-white.png" alt="CGC Logo" class="h-10 mb-6" />
+                        <p class="font-inter text-sm text-white mb-6">Serving with passion over 22 years</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="social-icon">
+                                <span class="text-white text-sm">f</span>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <span class="text-white text-sm">in</span>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <span class="text-white text-sm">tw</span>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <span class="text-white text-sm">yt</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div>
+                        <h3 class="font-outfit text-xl font-semibold mb-6">Quick Links</h3>
+                        <div class="h-px footer-gradient mb-6"></div>
+                        <ul class="space-y-3 font-inter">
+                            <li>
+                                <a href="#" class="text-white/80 hover:text-white transition flex items-center">
+                                    <svg class="w-3 h-3 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                    About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white/80 hover:text-white transition flex items-center">
+                                    <svg class="w-3 h-3 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                    News
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white/80 hover:text-white transition flex items-center">
+                                    <svg class="w-3 h-3 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                    Clients
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white/80 hover:text-white transition flex items-center">
+                                    <svg class="w-3 h-3 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                    Careers
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white/80 hover:text-white transition flex items-center">
+                                    <svg class="w-3 h-3 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Services -->
+                    <div>
+                        <h3 class="font-outfit text-xl font-semibold mb-6">Services</h3>
+                        <div class="h-px footer-gradient mb-6"></div>
+                        <ul class="space-y-3 font-inter">
+                            <li>
+                                <a href="#" class="text-white/80 hover:text-white transition flex items-center">
+                                    <svg class="w-3 h-3 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                    HR Solutions
+                                </a>
+                            </li>
+                            <li><a href="#" class="text-white/80 hover:text-white transition">Payroll</a></li>
+                            <li>
+                                <a href="#" class="text-white/80 hover:text-white transition flex items-center">
+                                    <svg class="w-3 h-3 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                    Management
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white/80 hover:text-white transition flex items-center">
+                                    <svg class="w-3 h-3 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                    Transportation
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white/80 hover:text-white transition flex items-center">
+                                    <svg class="w-3 h-3 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                    Housing
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white/80 hover:text-white transition flex items-center">
+                                    <svg class="w-3 h-3 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                    Sponsorship
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div>
+                        <h3 class="font-outfit text-xl font-semibold mb-6">Our Newsletter</h3>
+                        <div class="h-px footer-gradient mb-6"></div>
+                        <p class="font-inter text-sm text-white mb-6 leading-relaxed">Sign up to Private's weekly newsletter to get the latest updates</p>
+                        <form class="flex">
+                            <input type="email" placeholder="Email address" class="flex-1 bg-dark-navy/50 border-none rounded-l px-4 py-3 text-sm text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-primary-orange" />
+                            <button type="submit" class="bg-primary-orange hover:bg-opacity-90 text-white font-semibold px-6 py-3 rounded-r transition">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                    <p class="font-inter text-sm text-white/80 mb-4 md:mb-0">© 2025 City Group Company. All Rights Reserved.</p>
+                    <p class="font-inter text-sm text-white/80">Designed By TechSa Automations</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
